@@ -3,11 +3,13 @@ import {RouterModule, Routes} from "@angular/router";
 import { FaceSnapListComponent } from "./face-snap-list/face-snap-list.component";
 import {LandingPageComponent} from "./landing-page/landing-page.component";
 import {SingleFaceSnapComponent} from "./single-face-snap/single-face-snap.component";
+import {ReactiveFormsModule} from "@angular/forms";
 
 const routes: Routes = [
   { path : 'facesnap/:id', component : SingleFaceSnapComponent},
   { path : 'facesnap', component : FaceSnapListComponent},
-  { path : '', component : LandingPageComponent}
+  { path : '', component : LandingPageComponent},
+  { path : 'create', component : ReactiveFormsModule }
 ]
 @NgModule({
   imports : [ RouterModule.forRoot(routes) ],
