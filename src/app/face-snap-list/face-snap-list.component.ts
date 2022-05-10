@@ -18,17 +18,17 @@ export class FaceSnapListComponent implements OnInit, OnDestroy{
   }
 
   ngOnInit(): void {
-  //  this.destroy$ = new Subject<boolean>()
-  //  this.faceSnaps = this.faceSnapsServices.getAllFaceSnaps();
-  //  interval(1000).pipe(
-  //    takeUntil(this.destroy$),
-   //   take(3),
-   //   tap(  console.log)
-  //  ).subscribe()
+    this.destroy$ = new Subject<boolean>()
+    this.faceSnaps = this.faceSnapsServices.getAllFaceSnaps();
+    interval(1000).pipe(
+     takeUntil(this.destroy$),
+      take(3),
+      tap(  console.log)
+    ).subscribe()
   }
 
   ngOnDestroy() {
-  //  this.destroy$.next(true);
+    this.destroy$.next(true);
   }
 
 }
